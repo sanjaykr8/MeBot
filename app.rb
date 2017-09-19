@@ -19,6 +19,7 @@ get "/sms/incoming" do
   sender = params[:From] || ""
   body = params[:Body] || ""
   body = body.downcase.strip
+  media = nil
 
   if body == "who"
     message = "I'm Sanjay's MeBot"
